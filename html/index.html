@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tijolo &amp; Cal — Arquitetura e Obras (site de demonstração)</title>
+  <meta name="description" content="Demonstração de site de portfólio para escritório de arquitetura e obras: projetos, antes e depois, etapas com prazo, avaliações e orçamento pelo WhatsApp. Empresa fictícia criada pela novapicks.">
+  <meta name="theme-color" content="#F5F1E9">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../imagens/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fontes/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fontes/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/estilo.css">
+  <script>
+    /* Aplica o tema salvo antes da pintura, para não piscar */
+    try { var t = localStorage.getItem('tc-tema'); if (t === 'claro' || t === 'escuro') document.documentElement.dataset.tema = t; } catch (e) {}
+  </script>
+  <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo" data-pular>Pular para o conteúdo</a>
+
+  <aside class="faixa-demo" aria-label="Aviso de demonstração">
+    <p>
+      <strong>Exemplo de site criado pela novapicks.</strong>
+      Empresa, obras, números e depoimentos são fictícios.
+      <a href="https://novapicks.website" rel="noopener">novapicks.website</a>
+    </p>
+  </aside>
+
+  <header class="topo" id="topo">
+    <div class="miolo topo__linha">
+      <a class="marca" href="#topo" aria-label="Tijolo &amp; Cal, início da página">
+        <svg class="marca__selo" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <rect x="1.5" y="1.5" width="29" height="29" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M1.5 11.2h29M1.5 20.8h29M10.5 1.5v9.7M21.5 11.2v9.6M10.5 20.8v9.7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span class="marca__nome">Tijolo <em>&amp;</em> Cal</span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Seções da página">
+        <ul>
+          <li><a href="#obras">Obras</a></li>
+          <li><a href="#antes-depois">Antes e depois</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+        </ul>
+      </nav>
+
+      <div class="topo__acoes">
+        <button class="btn-tema" type="button" data-tema-botao aria-label="Alternar tema claro e escuro" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 9 9c-5 1-10-4-9-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="btn-menu" type="button" data-menu-botao aria-expanded="false" aria-controls="menu">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- 1. Hero -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="miolo hero__texto">
+        <p class="rotulo">Arquitetura e obras · São Paulo e região</p>
+        <h1 id="hero-titulo">Projeto e obra com <em>um só responsável</em>, do diagnóstico à entrega.</h1>
+        <div class="hero__base">
+          <p class="hero__lead">A Tijolo &amp; Cal assina o projeto e conduz a execução. Cada etapa tem escopo, prazo e valor combinados antes de começar.</p>
+          <div class="hero__cta">
+            <a class="botao" data-whatsapp="geral" href="https://wa.me/5511900000000">
+              Pedir orçamento pelo WhatsApp
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </a>
+            <p class="nota">Informe tipo de obra, bairro e prazo. O retorno traz a agenda da visita técnica.</p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="hero__foto">
+        <picture>
+          <source type="image/webp" srcset="../imagens/casa-olivo-600.webp 600w, ../imagens/casa-olivo-800.webp 800w, ../imagens/casa-olivo-1200.webp 1200w, ../imagens/casa-olivo-1376.webp 1376w" sizes="100vw">
+          <img src="../imagens/casa-olivo-1200.webp" width="1376" height="768" alt="Fachada de uma casa de dois pavimentos em concreto aparente e madeira, com uma oliveira no jardim de cascalho, ao entardecer" fetchpriority="high">
+        </picture>
+        <figcaption class="miolo hero__legenda">
+          <span>Casa Olivo — projeto de exemplo, 285 m²</span>
+          <span>Imagem ilustrativa gerada por IA</span>
+        </figcaption>
+      </figure>
+
+      <div class="miolo">
+        <ul class="disciplinas" aria-label="Áreas de atuação">
+          <li>Arquitetura</li>
+          <li>Engenharia civil</li>
+          <li>Interiores e marcenaria</li>
+          <li>Gestão de obra</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. Portfólio -->
+    <section class="secao" id="obras" aria-labelledby="obras-titulo">
+      <div class="miolo">
+        <header class="secao__cab">
+          <p class="rotulo">01 — Obras</p>
+          <h2 id="obras-titulo">Seis projetos de exemplo, de casa nova a retrofit</h2>
+          <p class="secao__lead">Cada ficha traz metragem, prazo e o resultado. Abra um projeto para ver o escopo e a imagem ampliada.</p>
+        </header>
+
+        <ol class="obras">
+          <li class="obra obra--a" data-obra="casa-olivo">
+            <figure class="obra__foto obra__foto--paisagem">
+              <picture>
+                <source type="image/webp" srcset="../imagens/casa-olivo-600.webp 600w, ../imagens/casa-olivo-1200.webp 1200w" sizes="(min-width:1024px) 58vw, 100vw">
+                <img src="../imagens/casa-olivo-600.webp" width="1376" height="768" loading="lazy" alt="Casa Olivo: fachada em concreto aparente e ipê com oliveira no jardim">
+              </picture>
+            </figure>
+            <div class="obra__texto">
+              <p class="obra__num">Nº 01</p>
+              <h3><button class="obra__abrir" type="button" data-abrir="casa-olivo">Casa Olivo</button></h3>
+              <p class="obra__meta">Casa nova · 285 m² · 14 meses · Cidade Jardim</p>
+              <p class="obra__frase">Concreto aparente e ipê, com a obra entregue no cronograma aprovado.</p>
+            </div>
+          </li>
+
+          <li class="obra obra--b" data-obra="apartamento-pinheiros">
+            <figure class="obra__foto obra__foto--paisagem">
+              <picture>
+                <source type="image/webp" srcset="../imagens/sala-depois-600.webp 600w, ../imagens/sala-depois-1200.webp 1200w" sizes="(min-width:1024px) 40vw, 100vw">
+                <img src="../imagens/sala-depois-600.webp" width="1264" height="848" loading="lazy" alt="Sala reformada com piso de espinha de peixe, estante de carvalho embutida e sofá em tom areia">
+              </picture>
+            </figure>
+            <div class="obra__texto">
+              <p class="obra__num">Nº 02</p>
+              <h3><button class="obra__abrir" type="button" data-abrir="apartamento-pinheiros">Apartamento Pinheiros</button></h3>
+              <p class="obra__meta">Reforma completa · 112 m² · 5 meses · Pinheiros</p>
+              <p class="obra__frase">De apartamento dos anos 90 a uma sala de luz contínua. <a href="#antes-depois">Ver antes e depois</a></p>
+            </div>
+          </li>
+
+          <li class="obra obra--c" data-obra="cozinha-verde">
+            <figure class="obra__foto obra__foto--paisagem">
+              <picture>
+                <source type="image/webp" srcset="../imagens/cozinha-600.webp 600w, ../imagens/cozinha-1200.webp 1200w" sizes="(min-width:1024px) 40vw, 100vw">
+                <img src="../imagens/cozinha-600.webp" width="1264" height="848" loading="lazy" alt="Cozinha com ilha em marcenaria ripada verde, tampo de quartzito branco e prateleiras de carvalho">
+              </picture>
+            </figure>
+            <div class="obra__texto">
+              <p class="obra__num">Nº 03</p>
+              <h3><button class="obra__abrir" type="button" data-abrir="cozinha-verde">Cozinha Verde</button></h3>
+              <p class="obra__meta">Interiores · 38 m² · 10 semanas · Perdizes</p>
+              <p class="obra__frase">Ilha de marcenaria ripada que organiza o preparo e a convivência.</p>
+            </div>
+          </li>
+
+          <li class="obra obra--d" data-obra="escritorio-vila-olimpia">
+            <figure class="obra__foto obra__foto--paisagem">
+              <picture>
+                <source type="image/webp" srcset="../imagens/escritorio-600.webp 600w, ../imagens/escritorio-1200.webp 1200w" sizes="(min-width:1024px) 58vw, 100vw">
+                <img src="../imagens/escritorio-600.webp" width="1264" height="848" loading="lazy" alt="Planta aberta de escritório com mesas longas de carvalho, sala de reunião em vidro e painéis acústicos cor de terracota">
+              </picture>
+            </figure>
+            <div class="obra__texto">
+              <p class="obra__num">Nº 04</p>
+              <h3><button class="obra__abrir" type="button" data-abrir="escritorio-vila-olimpia">Escritório Vila Olímpia</button></h3>
+              <p class="obra__meta">Corporativo · 460 m² · 4 meses · Vila Olímpia</p>
+              <p class="obra__frase">Obra faseada para a equipe continuar trabalhando no andar.</p>
+            </div>
+          </li>
+
+          <li class="obra obra--e" data-obra="casa-atibaia">
+            <figure class="obra__foto obra__foto--paisagem">
+              <picture>
+                <source type="image/webp" srcset="../imagens/casa-campo-600.webp 600w, ../imagens/casa-campo-1200.webp 1200w" sizes="(min-width:1024px) 40vw, 100vw">
+                <img src="../imagens/casa-campo-600.webp" width="1264" height="848" loading="lazy" alt="Casa térrea de tijolo pintado de branco com varanda de madeira e telhado cerâmico, cercada por eucaliptos">
+              </picture>
+            </figure>
+            <div class="obra__texto">
+              <p class="obra__num">Nº 05</p>
+              <h3><button class="obra__abrir" type="button" data-abrir="casa-atibaia">Casa Atibaia</button></h3>
+              <p class="obra__meta">Casa de campo · 190 m² · 10 meses · Atibaia</p>
+              <p class="obra__frase">Um volume baixo e uma varanda funda, pensados para o clima da serra.</p>
+            </div>
+          </li>
+
+          <li class="obra obra--f" data-obra="galpao-mooca">
+            <figure class="obra__foto obra__foto--paisagem">
+              <picture>
+                <source type="image/webp" srcset="../imagens/galpao-600.webp 600w, ../imagens/galpao-1200.webp 1200w" sizes="(min-width:1024px) 58vw, 100vw">
+                <img src="../imagens/galpao-600.webp" width="1264" height="848" loading="lazy" alt="Galpão de tijolo aparente convertido em estúdio, com esquadrias de aço preto e sheds de vidro, ao anoitecer">
+              </picture>
+            </figure>
+            <div class="obra__texto">
+              <p class="obra__num">Nº 06</p>
+              <h3><button class="obra__abrir" type="button" data-abrir="galpao-mooca">Galpão Mooca</button></h3>
+              <p class="obra__meta">Retrofit · 320 m² · 8 meses · Mooca</p>
+              <p class="obra__frase">A fachada de tijolo foi preservada e o interior ganhou mezanino.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="aviso-ia">Todas as imagens são ilustrativas, geradas por IA para esta demonstração. Em um site real, entram as fotos das obras do escritório.</p>
+      </div>
+    </section>
+
+    <!-- 3. Antes e depois -->
+    <section class="secao secao--escura" id="antes-depois" aria-labelledby="ad-titulo">
+      <div class="miolo">
+        <header class="secao__cab">
+          <p class="rotulo">02 — Antes e depois</p>
+          <h2 id="ad-titulo">Apartamento Pinheiros, mesma janela, outra sala</h2>
+          <p class="secao__lead">Arraste o controle ou use as setas do teclado para comparar o ambiente antes e depois da reforma.</p>
+        </header>
+
+        <div class="comparador" data-comparador>
+          <div class="comparador__quadro">
+            <img class="comparador__img" src="../imagens/sala-depois-1200.webp" width="1264" height="848" loading="lazy" alt="Sala depois da reforma: piso claro em espinha de peixe, estante de carvalho, paredes lisas e luz natural">
+            <img class="comparador__img comparador__img--antes" src="../imagens/sala-antes-1200.webp" width="1264" height="848" loading="lazy" alt="Mesma sala antes da reforma: taco escuro, paredes manchadas, cortina pesada e mobiliário antigo">
+            <span class="comparador__rotulo comparador__rotulo--antes" aria-hidden="true">Antes</span>
+            <span class="comparador__rotulo comparador__rotulo--depois" aria-hidden="true">Depois</span>
+            <span class="comparador__alca" aria-hidden="true"></span>
+          </div>
+          <label class="comparador__label" for="comparador-ctrl">Comparar antes e depois</label>
+          <input class="comparador__ctrl" id="comparador-ctrl" type="range" min="0" max="100" value="50" step="1" data-comparador-ctrl aria-valuetext="Antes 50%, depois 50%">
+        </div>
+
+        <dl class="ficha-ad">
+          <div><dt>O que mudou</dt><dd>Piso, forro, esquadrias, elétrica, marcenaria e iluminação.</dd></div>
+          <div><dt>Prazo</dt><dd>5 meses de obra, com 6 semanas de projeto antes.</dd></div>
+          <div><dt>Área</dt><dd>112 m², apartamento de 1994 (exemplo).</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 4. Como trabalhamos -->
+    <section class="secao" id="metodo" aria-labelledby="metodo-titulo">
+      <div class="miolo">
+        <header class="secao__cab">
+          <p class="rotulo">03 — Como trabalhamos</p>
+          <h2 id="metodo-titulo">Quatro etapas, cada uma com prazo</h2>
+          <p class="secao__lead">Ao fim de cada etapa há uma entrega por escrito. A decisão de seguir para a próxima é do cliente.</p>
+        </header>
+
+        <ol class="etapas">
+          <li class="etapa">
+            <p class="etapa__num" aria-hidden="true">1</p>
+            <div>
+              <h3>Diagnóstico</h3>
+              <p class="etapa__prazo">1 a 2 semanas</p>
+              <p>Visita técnica, levantamento de medidas e leitura do terreno ou do imóvel. Conversa sobre uso, verba e prazo.</p>
+              <p class="etapa__entrega"><strong>Entrega:</strong> escopo e faixa de investimento por escrito.</p>
+            </div>
+          </li>
+          <li class="etapa">
+            <p class="etapa__num" aria-hidden="true">2</p>
+            <div>
+              <h3>Projeto</h3>
+              <p class="etapa__prazo">4 a 8 semanas</p>
+              <p>Estudo preliminar, projeto executivo e compatibilização com estrutura e instalações. Orçamento detalhado por etapa.</p>
+              <p class="etapa__entrega"><strong>Entrega:</strong> caderno de projeto e orçamento fechado.</p>
+            </div>
+          </li>
+          <li class="etapa">
+            <p class="etapa__num" aria-hidden="true">3</p>
+            <div>
+              <h3>Execução</h3>
+              <p class="etapa__prazo">De 8 semanas a 14 meses, conforme o escopo</p>
+              <p>Cronograma semanal, relatório fotográfico quinzenal e medição mensal. Mudanças de escopo só entram com aditivo aprovado.</p>
+              <p class="etapa__entrega"><strong>Entrega:</strong> obra medida e documentada a cada mês.</p>
+            </div>
+          </li>
+          <li class="etapa">
+            <p class="etapa__num" aria-hidden="true">4</p>
+            <div>
+              <h3>Entrega</h3>
+              <p class="etapa__prazo">1 a 2 semanas</p>
+              <p>Vistoria conjunta, lista de pendências resolvida e manual de uso e manutenção do imóvel.</p>
+              <p class="etapa__entrega"><strong>Entrega:</strong> termo de garantia e acervo técnico.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. Avaliações -->
+    <section class="secao secao--areia" id="avaliacoes" aria-labelledby="av-titulo">
+      <div class="miolo">
+        <header class="secao__cab">
+          <p class="rotulo">04 — Avaliações</p>
+          <h2 id="av-titulo">Avaliações no Google</h2>
+          <p class="secao__lead">Em um site real, este bloco exibe a nota e os depoimentos do perfil do escritório no Google. Aqui, tudo é exemplo.</p>
+        </header>
+
+        <div class="avaliacoes">
+          <div class="nota-google">
+            <p class="nota-google__valor"><span class="visualmente-oculto">Nota de exemplo: </span>4,9<span class="nota-google__de"> de 5</span></p>
+            <p class="nota-google__estrelas" aria-hidden="true">★★★★★</p>
+            <p class="nota-google__legenda">Nota ilustrativa, sem relação com clientes reais.</p>
+            <p class="selo-exemplo">Exemplo</p>
+          </div>
+
+          <ul class="depoimentos">
+            <li>
+              <blockquote>
+                <p>O cronograma semanal e o relatório de fotos deixaram a obra previsível. A entrega veio com vistoria item por item.</p>
+              </blockquote>
+              <p class="depoimentos__autor"><strong>Marina T.</strong> · reforma de apartamento <span class="selo-exemplo">Depoimento de exemplo</span></p>
+            </li>
+            <li>
+              <blockquote>
+                <p>A marcenaria já nasceu compatibilizada com as instalações. Não houve retrabalho em obra.</p>
+              </blockquote>
+              <p class="depoimentos__autor"><strong>Rafael A.</strong> · casa nova <span class="selo-exemplo">Depoimento de exemplo</span></p>
+            </li>
+            <li>
+              <blockquote>
+                <p>Orçamento detalhado por etapa, com as variações de custo explicadas antes de acontecerem.</p>
+              </blockquote>
+              <p class="depoimentos__autor"><strong>Helena C.</strong> · escritório <span class="selo-exemplo">Depoimento de exemplo</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Orçamento -->
+    <section class="secao" id="orcamento" aria-labelledby="orc-titulo">
+      <div class="miolo orcamento">
+        <header class="secao__cab">
+          <p class="rotulo">05 — Orçamento</p>
+          <h2 id="orc-titulo">Pedir orçamento</h2>
+          <p class="secao__lead">Três informações bastam para a primeira conversa. O formulário monta a mensagem e abre o WhatsApp.</p>
+        </header>
+
+        <form class="form" data-orcamento novalidate>
+          <div class="campo">
+            <label for="f-tipo">Tipo de obra</label>
+            <select id="f-tipo" name="tipo" required aria-describedby="f-tipo-erro">
+              <option value="">Selecione</option>
+              <option>Casa nova</option>
+              <option>Reforma de apartamento</option>
+              <option>Reforma de casa</option>
+              <option>Interiores e marcenaria</option>
+              <option>Escritório ou loja</option>
+              <option>Retrofit de imóvel antigo</option>
+            </select>
+            <p class="campo__erro" id="f-tipo-erro" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="f-bairro">Bairro ou cidade da obra</label>
+            <input id="f-bairro" name="bairro" type="text" autocomplete="off" required maxlength="80" aria-describedby="f-bairro-erro" placeholder="Ex.: Pinheiros, São Paulo">
+            <p class="campo__erro" id="f-bairro-erro" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="f-prazo">Prazo desejado para começar</label>
+            <select id="f-prazo" name="prazo" required aria-describedby="f-prazo-erro">
+              <option value="">Selecione</option>
+              <option>Em até 30 dias</option>
+              <option>Entre 1 e 3 meses</option>
+              <option>Entre 3 e 6 meses</option>
+              <option>Ainda estou planejando</option>
+            </select>
+            <p class="campo__erro" id="f-prazo-erro" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="f-nome">Nome <span class="campo__opcional">(opcional)</span></label>
+            <input id="f-nome" name="nome" type="text" autocomplete="given-name" maxlength="60">
+          </div>
+
+          <div class="form__previa" role="group" aria-labelledby="previa-rotulo">
+            <p class="form__previa-rotulo" id="previa-rotulo">Mensagem que será enviada</p>
+            <p class="form__previa-texto" data-previa></p>
+          </div>
+
+          <div class="form__acoes">
+            <button class="botao" type="submit">
+              Enviar pelo WhatsApp
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <p class="nota">O número de WhatsApp desta demonstração é um espaço reservado. Em produção, a mensagem chega ao número do escritório.</p>
+          </div>
+          <p class="form__status" role="status" data-status></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="miolo rodape__grade">
+      <div class="rodape__bloco">
+        <p class="rodape__marca">Tijolo <em>&amp;</em> Cal</p>
+        <p>Arquitetura e Obras Ltda. — empresa fictícia para demonstração.</p>
+        <p>CNPJ 00.000.000/0001-00 (exemplo) · CAU/CREA nº 000000 (exemplo)</p>
+      </div>
+      <div class="rodape__bloco">
+        <h2 class="rodape__titulo">Área de atuação</h2>
+        <p>Cidade de São Paulo, Grande São Paulo, Campinas e a serra de Atibaia, Bragança e Mairiporã.</p>
+        <p class="rodape__endereco">Rua dos Exemplos, 123 — Vila Madalena, São Paulo/SP (endereço fictício)</p>
+      </div>
+      <figure class="rodape__mapa">
+        <svg viewBox="0 0 320 200" role="img" aria-labelledby="mapa-titulo mapa-desc">
+          <title id="mapa-titulo">Mapa ilustrativo</title>
+          <desc id="mapa-desc">Desenho esquemático de ruas com um marcador no endereço fictício do escritório. Não representa um local real.</desc>
+          <rect width="320" height="200" class="mapa__fundo"/>
+          <g class="mapa__ruas" fill="none" stroke-linecap="square">
+            <path d="M-10 150 L110 120 L200 140 L330 90" stroke-width="10"/>
+            <path d="M80 -10 L100 80 L110 120 L130 210" stroke-width="8"/>
+            <path d="M230 -10 L215 70 L200 140 L190 210" stroke-width="8"/>
+            <path d="M-10 50 L100 80 L215 70 L330 30" stroke-width="5"/>
+          </g>
+          <g class="mapa__quadra"><rect x="124" y="92" width="62" height="34"/><rect x="238" y="96" width="48" height="30"/><rect x="20" y="82" width="52" height="40"/></g>
+          <g class="mapa__pino" transform="translate(155 80)">
+            <path d="M0 0 C-14 -20 -16 -34 0 -42 C16 -34 14 -20 0 0Z"/>
+            <circle cx="0" cy="-28" r="5" class="mapa__furo"/>
+          </g>
+        </svg>
+        <figcaption>Mapa ilustrativo, sem endereço real.</figcaption>
+      </figure>
+    </div>
+
+    <div class="miolo rodape__fim">
+      <p>Site de demonstração criado pela <a href="https://novapicks.website" rel="noopener">novapicks</a>. Nome, CNPJ, endereço, obras, números e depoimentos são fictícios; as fotos são ilustrações geradas por IA.</p>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal-obra" aria-labelledby="modal-titulo">
+    <div class="modal__corpo">
+      <button class="modal__fechar" type="button" data-fechar aria-label="Fechar detalhes do projeto">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <img class="modal__img" data-modal-img src="../imagens/casa-olivo-600.webp" alt="" width="1200" height="800">
+      <div class="modal__texto">
+        <p class="rotulo" data-modal-tipo></p>
+        <h2 id="modal-titulo" data-modal-titulo>Projeto</h2>
+        <p class="modal__resumo" data-modal-resumo></p>
+        <dl class="modal__ficha">
+          <div><dt>Área</dt><dd data-modal-area></dd></div>
+          <div><dt>Prazo</dt><dd data-modal-prazo></dd></div>
+          <div><dt>Local</dt><dd data-modal-local></dd></div>
+        </dl>
+        <h3 class="modal__sub">Escopo</h3>
+        <ul class="modal__escopo" data-modal-escopo></ul>
+        <p class="modal__aviso">Projeto de exemplo. Imagem ilustrativa gerada por IA.</p>
+        <a class="botao" href="#orcamento" data-modal-orcar>Pedir orçamento de um projeto assim</a>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
