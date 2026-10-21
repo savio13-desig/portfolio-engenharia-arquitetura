@@ -20,7 +20,8 @@ export function iniciarComparador() {
     controle.value = String(Math.round(pct));
     atualizar();
   };
-  quadro.addEventListener('pointerdown', (e) => { arrastando = true; quadro.setPointerCapture(e.pointerId); mover(e.clientX); });
+  quadro.addEventListener('dragstart', (e) => e.preventDefault());
+  quadro.addEventListener('pointerdown', (e) => { e.preventDefault(); arrastando = true; quadro.setPointerCapture(e.pointerId); mover(e.clientX); });
   quadro.addEventListener('pointermove', (e) => { if (arrastando) mover(e.clientX); });
   const soltar = () => { arrastando = false; };
   quadro.addEventListener('pointerup', soltar);
